@@ -1,19 +1,10 @@
-variable "aws_region" {
-  type    = string
+variable "region" {
   default = "us-west-1"
 }
-
-variable "db_table_name" {
-  type    = string
-  default = "terraform-learn"
-}
-
-variable "db_read_capacity" {
-  type    = number
-  default = 1
-}
-
-variable "db_write_capacity" {
-  type    = number
-  default = 1
+variable "amis" {
+  type = map
+  default = {
+    "us-east-1" = "ami-b374d5a5"
+    "us-west-2" = "ami-fc0b939c"
+  }
 }
